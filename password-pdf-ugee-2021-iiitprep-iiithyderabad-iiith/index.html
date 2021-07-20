@@ -256,11 +256,20 @@ img.emoji {
 </center>
     <!-- SCRIPT -->
     <script>
-      function myFunction() {
-        var mob = document.getElementById("mobile").value;
-        var nam = document.getElementById("name").value;
-        location.replace("https://www.fast2sms.com/dev/bulkV2?authorization=HUz2mf4nQIxDBlLukGWN9Vwob3Ja016TYeqtKOr75ispdMhRgjF9eV3Ypc8RhJ0gxPXTkIHtubO5Z6LU&sender_id=IIITPR&message=111367&variables_values="+nam+"|UGEE-BOOK|iiitprep.com&route=dlt&numbers="+mob)
-        alert("PassWord of PDF File Has been Send to "+mob);
+      async function myFunction() {
+
+		var mob = document.getElementById("mobile").value;
+		var nam = document.getElementById("name").value;
+        
+		const response = await fetch("https://www.fast2sms.com/dev/bulkV2?authorization=HUz2mf4nQIxDBlLukGWN9Vwob3Ja016TYeqtKOr75ispdMhRgjF9eV3Ypc8RhJ0gxPXTkIHtubO5Z6LU&sender_id=IIITPR&message=111367&variables_values=" + nam + "|UGEE-BOOK|iiitprep.com&route=dlt&numbers=" + mob);
+    
+		const data = await response.json();
+		console.log(data);
+
+		if(data.return){
+			alert("Password of PDF File Has been Send to "+mob);
+		}else{alert("Please enter valid details")}
+	
       }
       </script>
 
