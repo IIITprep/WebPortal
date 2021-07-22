@@ -17,7 +17,7 @@
 <meta property="og:url" content="./password-pdf-ugee-2021-iiitprep-iiithyderabad-iiith/">
 <meta property="og:site_name" content="UGEE 21 IIIT Hyderabad | IIITprep">
 <meta property="article:author" content="https://www.facebook.com/iiitprep/">
-<meta property="og:updated_time" content="2021-05-06T14:53:15+05:30">
+<meta property="og:updated_time" content="2021-07-20T14:40:41+05:30">
 <meta property="og:image" content="./wp-content/uploads/2021/04/a113-724x1024.jpg">
 <meta property="og:image:width" content="724">
 <meta property="og:image:height" content="1024">
@@ -63,7 +63,7 @@ img.emoji {
 <link rel="stylesheet" id="elementor-frontend-css" href="./../wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.2.4" media="all">
 <style id="elementor-frontend-inline-css">@font-face{font-family:eicons;src:url(./../wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);src:url(./../wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"),url(./../wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"),url(./../wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"),url(./../wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"),url(./../wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");font-weight:400;font-style:normal}</style>
 <link rel="stylesheet" id="elementor-post-7-css" href="./../wp-content/uploads/elementor/css/post-7.css?ver=1622643254" media="all">
-<link rel="stylesheet" id="elementor-post-1517-css" href="./../wp-content/uploads/elementor/css/post-1517.css?ver=1622833900" media="all">
+<link rel="stylesheet" id="elementor-post-1517-css" href="./../wp-content/uploads/elementor/css/post-1517.css?ver=1626772254" media="all">
 <link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=5.7.2" media="all">
 <link rel="stylesheet" id="elementor-icons-shared-0-css" href="./../wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.1" media="all">
 <link rel="stylesheet" id="elementor-icons-fa-brands-css" href="./../wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.1" media="all">
@@ -256,11 +256,19 @@ img.emoji {
 </center>
     <!-- SCRIPT -->
     <script>
-      function myFunction() {
-        var mob = document.getElementById("mobile").value;
-        var nam = document.getElementById("name").value;
-        location.replace("https://www.fast2sms.com/dev/bulkV2?authorization=HUz2mf4nQIxDBlLukGWN9Vwob3Ja016TYeqtKOr75ispdMhRgjF9eV3Ypc8RhJ0gxPXTkIHtubO5Z6LU&sender_id=IIITPR&message=111367&variables_values="+nam+"|UGEE-BOOK|iiitprep.com&route=dlt&numbers="+mob)
-        alert("PassWord of PDF File Has been Send to "+mob);
+      async function myFunction() {
+
+		var mob = document.getElementById("mobile").value;
+		var nam = document.getElementById("name").value;
+        
+		const response = await fetch("https://www.fast2sms.com/dev/bulkV2?authorization=HUz2mf4nQIxDBlLukGWN9Vwob3Ja016TYeqtKOr75ispdMhRgjF9eV3Ypc8RhJ0gxPXTkIHtubO5Z6LU&sender_id=IIITPR&message=111367&variables_values=" + nam + "|UGEE-BOOK|iiitprep.com&route=dlt&numbers=" + mob);
+    
+		const data = await response.json();
+
+		if(data.return){
+			alert("Password of PDF File Has been Send to "+mob);
+		}else{alert("Please enter valid details")}
+	
       }
       </script>
 
@@ -427,7 +435,7 @@ img.emoji {
 									<div class="site-footer-top-section-1 site-footer-section footer-section-inner-items-1">
 						<div class="footer-widget-area widget-area site-footer-focus-item footer-widget3 content-align-left content-tablet-align-default content-mobile-align-default content-valign-default content-tablet-valign-default content-mobile-valign-default" data-section="sidebar-widgets-footer3">
 	<div class="footer-widget-area-inner site-info-inner">
-		<section id="text-3" class="widget widget_text"><h2 class="widget-title">IIITprep ™ Publication</h2>			<div class="textwidget">
+		<section id="text-3" class="widget widget_text"><h2 class="widget-title">IIITprep ™</h2>			<div class="textwidget">
 <p>IIITprep is a Community where Memory Based Questions of Exams are Shared, Preparation Guide for UGEE, Study Material, Online Mock Tests and much more… This Memory Based Details can be used Positively for Exam Preparation, it’s Proper Data Analysis can Help Students to Crack Exams, All This Boosts Exam Preparation of Candidate and Helps them to Achieve their Goals.</p>
 </div>
 		</section>	</div>
@@ -438,7 +446,7 @@ img.emoji {
 						<div class="footer-widget-area widget-area site-footer-focus-item footer-widget1 content-align-default content-tablet-align-default content-mobile-align-default content-valign-default content-tablet-valign-default content-mobile-valign-default" data-section="sidebar-widgets-footer1">
 	<div class="footer-widget-area-inner site-info-inner">
 		<section id="text-1" class="widget widget_text"><h2 class="widget-title">Contact us</h2>			<div class="textwidget">
-<p>IIITprep Publication</p>
+<p>IIITprep</p>
 <p>Visit : <a href="https://www.iiitprep.com/">www.iiitprep.com</a></p>
 <p>E &#8211; Mail : <a href="mailto:info@iiitprep.com">info@iiitprep.com</a></p>
 <p>WhatsApp : <a href="https://wa.me/message/QKQPA6HTBSCZD1">7972348944</a> </p>
@@ -500,7 +508,7 @@ img.emoji {
 <div class="footer-widget-area site-info site-footer-focus-item content-align-left content-tablet-align-default content-mobile-align-default content-valign-top content-tablet-valign-default content-mobile-valign-default" data-section="kadence_customizer_footer_html">
 	<div class="footer-widget-area-inner site-info-inner">
 		<div class="footer-html inner-link-style-normal"><div class="footer-html-inner">
-<p>&copy; 2021 IIITprep™ Publication | All rights reserved</p>
+<p>&copy; 2021 IIITprep™ | All rights reserved</p>
 <p>Made with ❤️ by IIITprep</p>
 <p>IIITprep has No Relation with IIIT Hyderabad (IIITH), IIITprep is Independant. Every Data Provided by us is Memory Based Data Provided by Previous UGEE Aspirant so, We didn't Claim it to be Official and 100 % Correct.</p>
 </div></div>	</div>
@@ -641,5 +649,5 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
 
 
-Served from: localhost @ 2021-07-16 14:44:12 by W3 Total Cache
+Served from: localhost @ 2021-07-23 00:10:39 by W3 Total Cache
 -->
